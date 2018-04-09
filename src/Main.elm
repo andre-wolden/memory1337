@@ -13,7 +13,7 @@ import Random
 
 viewImage : Card -> Html Msg
 viewImage card =
-    img [ src ("/public/cats/" ++ card.id ++ ".jpg") ] []
+    img [ src ("/img/" ++ card.id ++ ".jpg") ] []
 
 
 viewCard : Card -> Html Msg
@@ -27,7 +27,7 @@ viewCard card =
                 [ class "closed"
                 , onClick (CardClicked card)
                 ]
-                [ img [ src "/public/cats/closed.png" ] [] ]
+                [ img [ src "/img/closed.png" ] [] ]
 
         Matched ->
             div [ class "matched" ] [ viewImage card ]
