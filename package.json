@@ -2,8 +2,6 @@
   "app_version": 1,
   "scripts": {
     "dev": "webpack-dev-server --hot --port 3002 --config webpack.dev.js",
-
-
     "postinstall": "npm run build",
     "build": "NODE_ENV=production webpack --config ./webpack.prod.js --progress --profile --colors",
     "surge": "rm -rf build && npm run build && cp dist/index.html dist/200.html && surge dist",
